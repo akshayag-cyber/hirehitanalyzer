@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import CandidatePage           from './pages/CandidatePage';
 import HRLoginPage             from './pages/HRLoginPage';
 import AuthCallback            from './pages/AuthCallback';
 import HRDashboard             from './pages/HRDashboard';
@@ -36,10 +35,6 @@ export default function App() {
     <BrowserRouter>
       <Routes>
 
-        {/* ── Job Application (public) ── */}
-        <Route path="/"      element={<CandidatePage />} />
-        <Route path="/apply" element={<CandidatePage />} />
-
         {/* ── Hiring Portal (staff login + all dashboards) ── */}
         <Route path="/hiring"         element={<HRLoginPage />} />
         <Route path="/auth/callback"  element={<AuthCallback />} />
@@ -72,7 +67,7 @@ export default function App() {
           <ProtectedRoute requiredRole="admin"><AdminPage /></ProtectedRoute>
         } />
 
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Navigate to="/hiring" replace />} />
       </Routes>
     </BrowserRouter>
   );

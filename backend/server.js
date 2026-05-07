@@ -6,7 +6,6 @@ const session  = require('express-session');
 const passport = require('passport');
 const { initDB } = require('./database');
 
-const applicationsRouter = require('./routes/applications');
 const authRouter         = require('./routes/auth');
 const hrRouter           = require('./routes/hr');
 const interviewerRouter  = require('./routes/interviewer');
@@ -49,7 +48,6 @@ app.use(passport.session());
 
 // ── Routes ────────────────────────────────────────────────────────────────────
 
-app.use('/api/applications', applicationsRouter);
 app.use('/api/auth',         authRouter);
 app.use('/api/hr',           hrRouter);
 app.use('/api/interviewer',  interviewerRouter);
