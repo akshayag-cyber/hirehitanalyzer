@@ -1,0 +1,414 @@
+✓ Connected to PostgreSQL
+✓ Database schema initialized
+✓ Migration 3: Added indexes to jd_matches
+✓ Migration 6: Seeded interviewer1–5 dev accounts
+✓ Migration 11: audit_logs table ready
+
+TalentBridge Backend  →  http://localhost:5000
+Health check          →  http://localhost:5000/api/health
+
+Google Drive upload failed: GaxiosError: File not found: 1mucB9VKwu9GXjsLQR7RZAcuyAfDP_bgN.
+    at Gaxios._request (C:\Users\Akshaya\Desktop\vs app\backend\node_modules\gaxios\build\cjs\src\gaxios.js:155:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async JWT.requestAsync (C:\Users\Akshaya\Desktop\vs app\backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:463:20)
+    at async createAPIRequestAsync (C:\Users\Akshaya\Desktop\vs app\backend\node_modules\googleapis-common\build\src\apirequest.js:308:25)
+    at async uploadToDrive (C:\Users\Akshaya\Desktop\vs app\backend\services\driveService.js:79:19)
+    at async C:\Users\Akshaya\Desktop\vs app\backend\routes\applications.js:96:19 {
+  config: {
+    url: URL {
+      href: 'https://www.googleapis.com/upload/drive/v3/files?fields=id%2C%20webViewLink%2C%20webContentLink&supportsAllDrives=true&uploadType=multipart',
+      origin: 'https://www.googleapis.com',
+      protocol: 'https:',
+      username: '',
+      password: '',
+      host: 'www.googleapis.com',
+      hostname: 'www.googleapis.com',
+      port: '',
+      pathname: '/upload/drive/v3/files',
+      search: '?fields=id%2C%20webViewLink%2C%20webContentLink&supportsAllDrives=true&uploadType=multipart',
+      searchParams: URLSearchParams {
+        'fields' => 'id, webViewLink, webContentLink',
+        'supportsAllDrives' => 'true',
+        'uploadType' => 'multipart' },
+      hash: ''
+    },
+    method: 'POST',
+    apiVersion: '',
+    userAgentDirectives: [ [Object] ],
+    paramsSerializer: [Function (anonymous)],
+    data: PassThrough {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: true,
+      _maxListeners: undefined,
+      _flush: [Function: flush],
+      _eventsCount: 5,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kCallback): null
+    },
+    headers: Headers {
+      'accept-encoding': 'gzip',
+      authorization: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      'content-type': 'multipart/related; boundary=79bfd006-ff72-445c-8c9c-ffd173a41b4f',
+      'user-agent': 'google-api-nodejs-client/8.0.1 (gzip)',
+      'x-goog-api-client': 'gdcl/8.0.1 gl-node/24.14.1'
+    },
+    params: {
+      fields: 'id, webViewLink, webContentLink',
+      supportsAllDrives: true,
+      uploadType: 'multipart'
+    },
+    validateStatus: [Function (anonymous)],
+    retry: true,
+    body: PassThrough {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: true,
+      _maxListeners: undefined,
+      _flush: [Function: flush],
+      _eventsCount: 5,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kCallback): null
+    },
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor],
+    duplex: 'half',
+    retryConfig: {
+      currentRetryAttempt: 0,
+      retry: 3,
+      httpMethodsToRetry: [Array],
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1777530895641,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    }
+  },
+  response: Response {
+    size: 0,
+    data: { error: [Object] },
+    config: {
+      url: URL {},
+      method: 'POST',
+      apiVersion: '',
+      userAgentDirectives: [Array],
+      paramsSerializer: [Function (anonymous)],
+      data: [PassThrough],
+      headers: Headers {
+        'accept-encoding': 'gzip',
+        authorization: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        'content-type': 'multipart/related; boundary=79bfd006-ff72-445c-8c9c-ffd173a41b4f',
+        'user-agent': 'google-api-nodejs-client/8.0.1 (gzip)',
+        'x-goog-api-client': 'gdcl/8.0.1 gl-node/24.14.1'
+      },
+      params: [Object],
+      validateStatus: [Function (anonymous)],
+      retry: true,
+      body: [PassThrough],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor],
+      duplex: 'half'
+    },
+    Symbol(Body internals): {
+      body: [PassThrough],
+      stream: [PassThrough],
+      boundary: null,
+      disturbed: true,
+      error: null
+    },
+    Symbol(Response internals): {
+      type: 'default',
+      url: 'https://www.googleapis.com/upload/drive/v3/files?fields=id%2C%20webViewLink%2C%20webContentLink&supportsAllDrives=true&uploadType=multipart',
+      status: 404,
+      statusText: 'Not Found',
+      headers: [Object],
+      counter: 0,
+      highWaterMark: 16384
+    }
+  },
+  code: 404,
+  status: 404,
+  error: undefined,
+  Symbol(gaxios-gaxios-error): '7.1.4',
+  [cause]: {
+    message: 'File not found: 1mucB9VKwu9GXjsLQR7RZAcuyAfDP_bgN.',
+    code: 404,
+    status: 'Not Found',
+    errors: [ [Object] ]
+  }
+}
+Google Drive upload failed: GaxiosError: File not found: 1mucB9VKwu9GXjsLQR7RZAcuyAfDP_bgN.
+    at Gaxios._request (C:\Users\Akshaya\Desktop\vs app\backend\node_modules\gaxios\build\cjs\src\gaxios.js:155:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async JWT.requestAsync (C:\Users\Akshaya\Desktop\vs app\backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:463:20)
+    at async createAPIRequestAsync (C:\Users\Akshaya\Desktop\vs app\backend\node_modules\googleapis-common\build\src\apirequest.js:308:25)
+    at async uploadToDrive (C:\Users\Akshaya\Desktop\vs app\backend\services\driveService.js:79:19)
+    at async C:\Users\Akshaya\Desktop\vs app\backend\routes\applications.js:96:19 {
+  config: {
+    url: URL {
+      href: 'https://www.googleapis.com/upload/drive/v3/files?fields=id%2C%20webViewLink%2C%20webContentLink&supportsAllDrives=true&uploadType=multipart',
+      origin: 'https://www.googleapis.com',
+      protocol: 'https:',
+      username: '',
+      password: '',
+      host: 'www.googleapis.com',
+      hostname: 'www.googleapis.com',
+      port: '',
+      pathname: '/upload/drive/v3/files',
+      search: '?fields=id%2C%20webViewLink%2C%20webContentLink&supportsAllDrives=true&uploadType=multipart',
+      searchParams: URLSearchParams {
+        'fields' => 'id, webViewLink, webContentLink',
+        'supportsAllDrives' => 'true',
+        'uploadType' => 'multipart' },
+      hash: ''
+    },
+    method: 'POST',
+    apiVersion: '',
+    userAgentDirectives: [ [Object] ],
+    paramsSerializer: [Function (anonymous)],
+    data: PassThrough {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: true,
+      _maxListeners: undefined,
+      _flush: [Function: flush],
+      _eventsCount: 5,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kCallback): null
+    },
+    headers: Headers {
+      'accept-encoding': 'gzip',
+      authorization: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      'content-type': 'multipart/related; boundary=5ffb7f32-5f67-4e4f-9298-85d5adbbf793',
+      'user-agent': 'google-api-nodejs-client/8.0.1 (gzip)',
+      'x-goog-api-client': 'gdcl/8.0.1 gl-node/24.14.1'
+    },
+    params: {
+      fields: 'id, webViewLink, webContentLink',
+      supportsAllDrives: true,
+      uploadType: 'multipart'
+    },
+    validateStatus: [Function (anonymous)],
+    retry: true,
+    body: PassThrough {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: true,
+      _maxListeners: undefined,
+      _flush: [Function: flush],
+      _eventsCount: 5,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kCallback): null
+    },
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor],
+    duplex: 'half',
+    retryConfig: {
+      currentRetryAttempt: 0,
+      retry: 3,
+      httpMethodsToRetry: [Array],
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1777530970870,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    }
+  },
+  response: Response {
+    size: 0,
+    data: { error: [Object] },
+    config: {
+      url: URL {},
+      method: 'POST',
+      apiVersion: '',
+      userAgentDirectives: [Array],
+      paramsSerializer: [Function (anonymous)],
+      data: [PassThrough],
+      headers: Headers {
+        'accept-encoding': 'gzip',
+        authorization: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        'content-type': 'multipart/related; boundary=5ffb7f32-5f67-4e4f-9298-85d5adbbf793',
+        'user-agent': 'google-api-nodejs-client/8.0.1 (gzip)',
+        'x-goog-api-client': 'gdcl/8.0.1 gl-node/24.14.1'
+      },
+      params: [Object],
+      validateStatus: [Function (anonymous)],
+      retry: true,
+      body: [PassThrough],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor],
+      duplex: 'half'
+    },
+    Symbol(Body internals): {
+      body: [PassThrough],
+      stream: [PassThrough],
+      boundary: null,
+      disturbed: true,
+      error: null
+    },
+    Symbol(Response internals): {
+      type: 'default',
+      url: 'https://www.googleapis.com/upload/drive/v3/files?fields=id%2C%20webViewLink%2C%20webContentLink&supportsAllDrives=true&uploadType=multipart',
+      status: 404,
+      statusText: 'Not Found',
+      headers: [Object],
+      counter: 0,
+      highWaterMark: 16384
+    }
+  },
+  code: 404,
+  status: 404,
+  error: undefined,
+  Symbol(gaxios-gaxios-error): '7.1.4',
+  [cause]: {
+    message: 'File not found: 1mucB9VKwu9GXjsLQR7RZAcuyAfDP_bgN.',
+    code: 404,
+    status: 'Not Found',
+    errors: [ [Object] ]
+  }
+}
+Google Drive upload failed: GaxiosError: File not found: 1mucB9VKwu9GXjsLQR7RZAcuyAfDP_bgN.
+    at Gaxios._request (C:\Users\Akshaya\Desktop\vs app\backend\node_modules\gaxios\build\cjs\src\gaxios.js:155:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async JWT.requestAsync (C:\Users\Akshaya\Desktop\vs app\backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:463:20)
+    at async createAPIRequestAsync (C:\Users\Akshaya\Desktop\vs app\backend\node_modules\googleapis-common\build\src\apirequest.js:308:25)
+    at async uploadToDrive (C:\Users\Akshaya\Desktop\vs app\backend\services\driveService.js:79:19)
+    at async C:\Users\Akshaya\Desktop\vs app\backend\routes\applications.js:96:19 {
+  config: {
+    url: URL {
+      href: 'https://www.googleapis.com/upload/drive/v3/files?fields=id%2C%20webViewLink%2C%20webContentLink&supportsAllDrives=true&uploadType=multipart',
+      origin: 'https://www.googleapis.com',
+      protocol: 'https:',
+      username: '',
+      password: '',
+      host: 'www.googleapis.com',
+      hostname: 'www.googleapis.com',
+      port: '',
+      pathname: '/upload/drive/v3/files',
+      search: '?fields=id%2C%20webViewLink%2C%20webContentLink&supportsAllDrives=true&uploadType=multipart',
+      searchParams: URLSearchParams {
+        'fields' => 'id, webViewLink, webContentLink',
+        'supportsAllDrives' => 'true',
+        'uploadType' => 'multipart' },
+      hash: ''
+    },
+    method: 'POST',
+    apiVersion: '',
+    userAgentDirectives: [ [Object] ],
+    paramsSerializer: [Function (anonymous)],
+    data: PassThrough {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: true,
+      _maxListeners: undefined,
+      _flush: [Function: flush],
+      _eventsCount: 5,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kCallback): null
+    },
+    headers: Headers {
+      'accept-encoding': 'gzip',
+      authorization: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      'content-type': 'multipart/related; boundary=8c1f2c6a-cb36-46aa-b900-f19b56329b1c',
+      'user-agent': 'google-api-nodejs-client/8.0.1 (gzip)',
+      'x-goog-api-client': 'gdcl/8.0.1 gl-node/24.14.1'
+    },
+    params: {
+      fields: 'id, webViewLink, webContentLink',
+      supportsAllDrives: true,
+      uploadType: 'multipart'
+    },
+    validateStatus: [Function (anonymous)],
+    retry: true,
+    body: PassThrough {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: true,
+      _maxListeners: undefined,
+      _flush: [Function: flush],
+      _eventsCount: 5,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kCallback): null
+    },
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor],
+    duplex: 'half',
+    retryConfig: {
+      currentRetryAttempt: 0,
+      retry: 3,
+      httpMethodsToRetry: [Array],
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1777531218785,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    }
+  },
+  response: Response {
+    size: 0,
+    data: { error: [Object] },
+    config: {
+      url: URL {},
+      method: 'POST',
+      apiVersion: '',
+      userAgentDirectives: [Array],
+      paramsSerializer: [Function (anonymous)],
+      data: [PassThrough],
+      headers: Headers {
+        'accept-encoding': 'gzip',
+        authorization: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        'content-type': 'multipart/related; boundary=8c1f2c6a-cb36-46aa-b900-f19b56329b1c',
+        'user-agent': 'google-api-nodejs-client/8.0.1 (gzip)',
+        'x-goog-api-client': 'gdcl/8.0.1 gl-node/24.14.1'
+      },
+      params: [Object],
+      validateStatus: [Function (anonymous)],
+      retry: true,
+      body: [PassThrough],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor],
+      duplex: 'half'
+    },
+    Symbol(Body internals): {
+      body: [PassThrough],
+      stream: [PassThrough],
+      boundary: null,
+      disturbed: true,
+      error: null
+    },
+    Symbol(Response internals): {
+      type: 'default',
+      url: 'https://www.googleapis.com/upload/drive/v3/files?fields=id%2C%20webViewLink%2C%20webContentLink&supportsAllDrives=true&uploadType=multipart',
+      status: 404,
+      statusText: 'Not Found',
+      headers: [Object],
+      counter: 0,
+      highWaterMark: 16384
+    }
+  },
+  code: 404,
+  status: 404,
+  error: undefined,
+  Symbol(gaxios-gaxios-error): '7.1.4',
+  [cause]: {
+    message: 'File not found: 1mucB9VKwu9GXjsLQR7RZAcuyAfDP_bgN.',
+    code: 404,
+    status: 'Not Found',
+    errors: [ [Object] ]
+  }
+}

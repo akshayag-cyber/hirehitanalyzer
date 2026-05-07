@@ -1,0 +1,55 @@
+services:
+
+  # ── PostgreSQL ──────────────────────────────────────────────────────────────
+  postgres:
+    image: postgres:15-alpine
+    container_name: talentbridge-db
+    environment:
+      POSTGRES_USER: ${DB_USER:-talentbridge}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-talentbridge}
+      POSTGRES_DB: ${DB_NAME:-talentbridge}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-talentbridge}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # ── Backend ─────────────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: talentbridge-backend
+    env_file: ./backend/.env          # loads all vars from your existing .env
+    environment:
+      DB_HOST: postgres               # override localhost → postgres service name
+      DB_PORT: 5432
+      NODE_ENV: production
+      FRONTEND_URL: http://localhost  # nginx serves frontend on port 80
+    volumes:
+      - uploads:/app/uploads                           # legacy local files (pre-Drive); kept as a read fallback
+      - ./backend/config:/app/config:ro                # service-account JSON for Google Drive (read-only)
+    ports:
+      - "5000:5000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # ── Frontend (nginx) ────────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: talentbridge-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  uploads:

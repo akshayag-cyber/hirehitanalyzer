@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell.exe -ExecutionPolicy Bypass -Command '& { $env:Path = [System.Environment]::GetEnvironmentVariable\\('\\\\''Path'\\\\'','\\\\''Machine'\\\\''\\) + '\\\\'';'\\\\'' + [System.Environment]::GetEnvironmentVariable\\('\\\\''Path'\\\\'','\\\\''User'\\\\''\\); Set-Location '\\\\''C:\\\\Users\\\\Akshaya\\\\Desktop\\\\vs app\\\\backend'\\\\''; npm install 2>&1 }')",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -Command '& { $env:Path = [System.Environment]::GetEnvironmentVariable\\('\\\\''Path'\\\\'','\\\\''Machine'\\\\''\\) + '\\\\'';'\\\\'' + [System.Environment]::GetEnvironmentVariable\\('\\\\''Path'\\\\'','\\\\''User'\\\\''\\); Set-Location '\\\\''C:\\\\Users\\\\Akshaya\\\\Desktop\\\\vs app\\\\backend'\\\\''; Remove-Item -Recurse -Force node_modules -ErrorAction SilentlyContinue; npm install 2>&1 }')",
+      "Bash(psql --version)",
+      "Bash(npm install *)",
+      "Bash(node test-pg.js)",
+      "Bash(curl -s http://localhost:5000/api/health)",
+      "Bash(awk '{print $2}')",
+      "Bash(xargs kill *)",
+      "Bash(npm start *)",
+      "Bash(curl -s http://localhost:5000/api/auth/status)",
+      "Bash(psql -U postgres -h localhost -d talentbridge -c \"SELECT COUNT\\(*\\) as application_count FROM applications;\")",
+      "Bash(curl -s http://localhost:5000/api/applications)",
+      "Bash(curl -s -X POST http://localhost:5000/api/applications -F 'full_name=Sarah Johnson' -F email=sarah.johnson@example.com -F phone=+1-555-0123 -F 'primary_role=Data Scientist' -F 'education=Master'\\\\''s Degree' -F years_of_experience=5 -F salary_min=120 -F salary_max=180 -F salary_flexible=false -F 'preferred_domains=[\\\\Data' 'Science\\\\,\\\\Cloud')",
+      "Bash('DevOps\\\\]' -F cv=@/tmp/test.pdf)",
+      "Bash(curl -s -X POST http://localhost:5000/api/applications -F 'full_name=Sarah Johnson' -F email=sarah.johnson@example.com -F phone=+1-555-0123 -F 'primary_role=Data Scientist' -F 'education=Master'\\\\''s Degree' -F years_of_experience=5 -F salary_min=120 -F salary_max=180 -F salary_flexible=false -F 'preferred_domains=[\"Data Science\",\"Cloud & DevOps\"]' -F cv=@/tmp/test.pdf)",
+      "Bash(curl -s -X POST http://localhost:5000/api/auth/dev-login -H 'Content-Type: application/json' -d '{\"role\":\"hr\"}')",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s -X POST http://localhost:5000/api/auth/dev-login -H 'Content-Type: application/json' -d '{\"role\":\"interviewer\"}')",
+      "Bash(curl -s http://localhost:5173/zentiti-logo.png)"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/c/Users/Akshaya/Desktop/vs app/frontend/**)",
+      "PowerShell(Get-Command pg_isready -ErrorAction SilentlyContinue)",
+      "Read(//c/Program Files/PostgreSQL/**)",
+      "PowerShell(& \"C:\\\\Program Files\\\\PostgreSQL\\\\18\\\\bin\\\\pg_isready.exe\" -h localhost -p 5432)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Docker\\\\Docker\\\\resources\\\\bin\\\\docker.exe\" ps -a 2>&1)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\('Path','Machine'\\) + ';' + [System.Environment]::GetEnvironmentVariable\\('Path','User'\\); cd \"C:\\\\Users\\\\Akshaya\\\\Desktop\\\\vs app\\\\backend\"; npm install --save-dev jest supertest 2>&1 | tail -5)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\('Path','Machine'\\) + ';' + [System.Environment]::GetEnvironmentVariable\\('Path','User'\\); cd \"C:\\\\Users\\\\Akshaya\\\\Desktop\\\\vs app\\\\backend\"; npm test 2>&1 | Select-String -Pattern \"PASS|FAIL|Tests:|✓|✗|●|passed|failed\" | Select-Object -Last 30)"
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+# Place your Google Drive service-account JSON key here as `drive-credentials.json`.
+# This file is gitignored — never commit credentials.
